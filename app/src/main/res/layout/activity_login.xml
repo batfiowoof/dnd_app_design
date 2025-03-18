@@ -6,25 +6,27 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="24dp"
-    android:background="#540505"> <!-- Светло червен фон -->
+    android:background="#121212"> <!-- Тъмен фон -->
 
+    <!-- Заглавие -->
+
+    <!-- Профилна икона -->
+
+    <!-- Поле за потребителско име -->
 
     <ImageView
-        android:id="@+id/imgMain"
-        android:layout_width="259dp"
-        android:layout_height="243dp"
-        android:layout_marginBottom="120dp"
-        android:src="@drawable/d20" />
-
-    <!-- Тъмночервен текст -->
+        android:layout_width="183dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dnd_logo" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:gravity="center"
         android:text="Bojo's DnD App"
-        android:textColor="#E00B0B"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -35,8 +37,12 @@
         android:hint="Username"
         android:inputType="textPersonName"
         android:padding="12dp"
-        android:background="@android:drawable/edit_text" />
+        android:textColor="#FFFFFF"
+        android:textColorHint="#888888"
+        android:background="@drawable/input_background"
+        android:layout_marginBottom="10dp"/>
 
+    <!-- Поле за парола -->
     <EditText
         android:id="@+id/editPassword"
         android:layout_width="match_parent"
@@ -44,24 +50,39 @@
         android:hint="Password"
         android:inputType="textPassword"
         android:padding="12dp"
-        android:layout_marginTop="12dp"
-        android:background="@android:drawable/edit_text" />
+        android:textColor="#FFFFFF"
+        android:textColorHint="#888888"
+        android:background="@drawable/input_background"
+        android:layout_marginBottom="20dp"/>
 
+    <!-- Бутон за вход -->
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Login"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#D32F2F"  <!-- Червен бутон -->
-    />
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#D32F2F"
+        android:layout_marginBottom="10dp"/>
 
+    <!-- Бутон за регистрация -->
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Register"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#E53935" <!-- Малко по-светъл червен бутон -->
-    />
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#E53935"/>
+
+    <!-- Забравена парола -->
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot password?"
+        android:textSize="14sp"
+        android:textColor="#4CAF50"
+        android:layout_marginTop="10dp"/>
 </LinearLayout>

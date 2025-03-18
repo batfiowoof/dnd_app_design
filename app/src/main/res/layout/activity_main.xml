@@ -1,37 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="24dp"
-    android:background="#FFEEEE"> <!-- Светло червен фон -->
+    android:background="#121212"
+    android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Main Menu"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="20dp"
-        android:textColor="#B71C1C" /> <!-- Тъмночервен текст -->
-
-    <Button
-        android:id="@+id/btnShop"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Go to Shop"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#D32F2F"
-        android:textColor="@android:color/white" />
+        android:orientation="vertical"
+        android:gravity="center">
 
-    <Button
-        android:id="@+id/btnCharacter"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Character Info"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#E53935"
-        android:textColor="@android:color/white" />
-</LinearLayout>
+        <!-- Назад бутон -->
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@android:drawable/ic_media_previous"
+            android:layout_gravity="start"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Заглавие -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Профилна снимка -->
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/d20"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Потребителско име -->
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Batfiowoof"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Карта с Free Tier -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1E1E1E"
+            android:padding="16dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:cornerRadius="10dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/d20"
+                android:tint="#FFFFFF"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Free Tier"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginStart="30dp"
+                android:text="Manage"
+                android:textColor="#4CAF50"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <!-- Changelog секция -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1E1E1E"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:cornerRadius="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Changelog: Version 2.68 2/14/2025"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Minor bug fixes and improvements"
+                android:textSize="14sp"
+                android:textColor="#B0B0B0"/>
+
+        </LinearLayout>
+
+        <!-- Настройки -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SETTINGS"
+            android:textSize="14sp"
+            android:textColor="#B0B0B0"
+            android:layout_marginTop="10dp"/>
+
+        <Switch
+            android:id="@+id/switchAutoLock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Prevent Screen Auto-lock"
+            android:textColor="#FFFFFF"
+            android:checked="true"
+            android:layout_marginTop="10dp"/>
+
+        <Switch
+            android:id="@+id/switchHighlight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Highlight Rollable Elements"
+            android:textColor="#FFFFFF"
+            android:checked="true"
+            android:layout_marginTop="10dp"/>
+
+        <Switch
+            android:id="@+id/switchSurveys"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Display Surveys"
+            android:textColor="#FFFFFF"
+            android:checked="true"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Support секция -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SUPPORT"
+            android:textSize="14sp"
+            android:textColor="#B0B0B0"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/tvSupport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Support"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+</ScrollView>

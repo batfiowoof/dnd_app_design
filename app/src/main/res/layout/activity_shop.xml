@@ -1,37 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="24dp"
-    android:background="#FFEEEE">
+    android:background="#121212"
+    android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Shop"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="20dp"
-        android:textColor="#B71C1C" />
-
-    <Button
-        android:id="@+id/btnBuyItem"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Buy Item"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#D32F2F"
-        android:textColor="@android:color/white" />
+        android:orientation="vertical"
+        android:gravity="center">
 
-    <Button
-        android:id="@+id/btnBackToMain"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Back to Menu"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#E53935"
-        android:textColor="@android:color/white" />
-</LinearLayout>
+        <!-- Назад бутон -->
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@android:drawable/ic_media_previous"
+            android:layout_gravity="start"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Заглавие -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shop"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Предмет 1: Sword of Flames -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#1E1E1E"
+            android:padding="12dp"
+            android:cornerRadius="10dp"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/d20"
+                android:scaleType="centerCrop"
+                android:layout_marginEnd="12dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sword of Flames"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A powerful sword engulfed in flames."
+                    android:textSize="14sp"
+                    android:textColor="#B0B0B0"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100 Gold"
+                    android:textSize="16sp"
+                    android:textColor="#FFD700"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnBuySword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buy"
+                android:backgroundTint="#D32F2F"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+
+        <!-- Предмет 2: Healing Potion -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#1E1E1E"
+            android:padding="12dp"
+            android:cornerRadius="10dp"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/dnd_logo"
+                android:scaleType="centerCrop"
+                android:layout_marginEnd="12dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Healing Potion"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Restores 50 HP instantly."
+                    android:textSize="14sp"
+                    android:textColor="#B0B0B0"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50 Gold"
+                    android:textSize="16sp"
+                    android:textColor="#FFD700"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnBuyPotion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buy"
+                android:backgroundTint="#D32F2F"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+
+        <!-- Предмет 3: Arcane Scroll -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#1E1E1E"
+            android:padding="12dp"
+            android:cornerRadius="10dp"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/tasha"
+                android:scaleType="centerCrop"
+                android:layout_marginEnd="12dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Arcane Scroll"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contains a powerful ancient spell."
+                    android:textSize="14sp"
+                    android:textColor="#B0B0B0"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="75 Gold"
+                    android:textSize="16sp"
+                    android:textColor="#FFD700"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnBuyScroll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buy"
+                android:backgroundTint="#D32F2F"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+
+        <!-- Бутон за връщане в менюто -->
+        <Button
+            android:id="@+id/btnBackToMainFromShop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back to Menu"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#E53935"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</ScrollView>
