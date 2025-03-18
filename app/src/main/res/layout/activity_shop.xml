@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#FFEEEE">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shop"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:textColor="#B71C1C" />
+
+    <Button
+        android:id="@+id/btnBuyItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buy Item"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#D32F2F"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btnBackToMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back to Menu"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#E53935"
+        android:textColor="@android:color/white" />
+</LinearLayout>
